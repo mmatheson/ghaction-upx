@@ -80,5 +80,10 @@ function getName(version: string): string {
   } else if (osPlat == 'linux') {
     platform = getLinuxPlatform(osArch);
   }
+
+  core.info(`osPlat: ${osPlat}`);
+  core.info(`osArch: ${osArch}`);
+  core.info(`platform: ${platform}`);
+  core.info(`version: ${version}`);
   return util.format('upx-%s-%s', version, platform);
 }
